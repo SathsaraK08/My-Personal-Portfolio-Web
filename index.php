@@ -1,4 +1,5 @@
-<?php include('./include/db.php'); 
+<?php include('./include/db.php');
+
 $query = "SELECT * FROM basic_setup,personal_setup,aboutus_setup";
 $runquery = mysqli_query($db,$query);
 if(!$db){
@@ -379,7 +380,7 @@ while($data5=mysqli_fetch_array($runquery5)){
             </div>
 -->
             <div class="credits">
-                Developed by <a href="#">The terminal Boy</a>
+                Developed by <a href="#">Sathsara Karunarathne</a>
             </div>
         </div>
     </footer><!-- End  Footer -->
