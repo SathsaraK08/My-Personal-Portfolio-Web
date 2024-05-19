@@ -24,7 +24,9 @@ $data = mysqli_fetch_array($runquery);
     <link href="assets/img/<?=$data['icon']?>" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,15 +46,14 @@ $data = mysqli_fetch_array($runquery);
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-        #hero {
-            background: url(assets/img/<?=$data['homewallpaper']?>);
-        }
-
+    #hero {
+        background: url(assets/img/<?=$data['homewallpaper']?>);
+    }
     </style>
 </head>
 
 <body>
-  
+
     <!-- ======= Mobile nav toggle button ======= -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
@@ -92,7 +93,7 @@ $data = mysqli_fetch_array($runquery);
         }
       if($data['github']!=""){
             ?>
-                    <a href="<?=$data['instagram']?>" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="<?=$data['github']?>" class="github"><i class="bx bxl-github"></i></a>
                     <?php
         } 
         ?>
@@ -147,12 +148,15 @@ $data = mysqli_fetch_array($runquery);
                         </p>
                         <div>
                             <ul class="row">
-                                <li class="col-lg-6"><i class="icofont-rounded-right"></i> <strong>Birthday :</strong> <?=$data['dob']?></li>
-                                <li class="col-lg-6"><i class="icofont-rounded-right"></i> <strong>Email :</strong> <?=$data['emailid']?></li>
-                                <li class="col-lg-5"><i class="icofont-rounded-right"></i> <strong>Mobile :</strong> <?=$data['mobile']?></li>
-                               
-                                
-                                
+                                <li class="col-lg-6"><i class="icofont-rounded-right"></i> <strong>Birthday :</strong>
+                                    <?=$data['dob']?></li>
+                                <li class="col-lg-6"><i class="icofont-rounded-right"></i> <strong>Email :</strong>
+                                    <?=$data['emailid']?></li>
+                                <li class="col-lg-5"><i class="icofont-rounded-right"></i> <strong>Mobile :</strong>
+                                    <?=$data['mobile']?></li>
+
+
+
 
 
                             </ul>
@@ -179,7 +183,7 @@ $data = mysqli_fetch_array($runquery);
                 <div class="row skills-content">
 
                     <div class="row col-lg-12" data-aos="fade-up">
-<?php
+                        <?php
                     $query3 = "SELECT * FROM skills";
 $runquery3= mysqli_query($db,$query3);
 while($data3=mysqli_fetch_array($runquery3)){
@@ -187,15 +191,16 @@ while($data3=mysqli_fetch_array($runquery3)){
                         <div class="progress col-lg-6">
                             <span class="skill"><?=$data3['skill']?> <i class="val"><?=$data3['score']?>%</i></span>
                             <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="<?=$data3['score']?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="<?=$data3['score']?>"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
-                                <?php
+                        <?php
 }
                     ?>
-                        
 
-                        
+
+
                     </div>
 
                 </div>
@@ -219,34 +224,34 @@ while($data3=mysqli_fetch_array($runquery3)){
 $runquery4= mysqli_query($db,$query4);
 while($data4=mysqli_fetch_array($runquery4)){
     ?>
-                    <div class="resume-item">
+                        <div class="resume-item">
                             <h4><?=$data4['title']?></h4>
                             <h5><?=$data4['year']?></h5>
                             <p><em><?=$data4['ogname']?></em></p>
                             <p><?=$data4['workdesc']?></p>
                         </div>
-                                <?php
+                        <?php
 }
                     ?>
-                        
-                        
-                        
+
+
+
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="resume-title">Professional Experience</h3>
-                        
+
                         <?php
                     $query4 = "SELECT * FROM resume WHERE category='pe'";
 $runquery4= mysqli_query($db,$query4);
 while($data4=mysqli_fetch_array($runquery4)){
     ?>
-                    <div class="resume-item">
+                        <div class="resume-item">
                             <h4><?=$data4['title']?></h4>
                             <h5><?=$data4['year']?></h5>
                             <p><em><?=$data4['ogname']?></em></p>
                             <p><?=$data4['workdesc']?></p>
                         </div>
-                                <?php
+                        <?php
 }
                     ?>
                     </div>
@@ -266,35 +271,37 @@ while($data4=mysqli_fetch_array($runquery4)){
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-                   <?php
+                    <?php
                     $query5 = "SELECT * FROM portfolio";
 $runquery5= mysqli_query($db,$query5);
 while($data5=mysqli_fetch_array($runquery5)){
     ?>
-                  <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="col-lg-4 col-md-6 portfolio-item">
                         <div class="portfolio-wrap">
                             <img src="assets/img/<?=$data5['projectpic']?>" class="img-fluid" alt="">
                             <div class="portfolio-links" title="<?=$data5['projectname']?>">
-                                
-                                <a href="assets/img/<?=$data5['projectpic']?>" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="<?=$data5['projectlink']?>" target="_blank" title="Visit <?=$data5['projectname']?>"><i class="bx bx-link"></i></a>
+
+                                <a href="assets/img/<?=$data5['projectpic']?>" data-gall="portfolioGallery"
+                                    class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="<?=$data5['projectlink']?>" target="_blank"
+                                    title="Visit <?=$data5['projectname']?>"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>
-                                <?php
+                    <?php
 }
                     ?>
-                    
 
-                    
-                       
+
+
+
 
                 </div>
 
             </div>
         </section><!-- End Portfolio Section -->
 
-        
+
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
             <div class="container">
@@ -333,23 +340,27 @@ while($data5=mysqli_fetch_array($runquery5)){
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars" />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <input type="email" class="form-control" name="email" id="email" data-rule="email"
+                                        data-msg="Please enter a valid email" />
                                     <div class="validate"></div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Message</label>
-                                <textarea class="form-control" name="message" id="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                                <textarea class="form-control" name="message" id="message" rows="10"
+                                    data-rule="required" data-msg="Please write something for us"></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -360,7 +371,7 @@ while($data5=mysqli_fetch_array($runquery5)){
                             <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
-<!--
+                    <!--
                     
 -->
 
@@ -374,7 +385,7 @@ while($data5=mysqli_fetch_array($runquery5)){
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
-<!--
+            <!--
             <div class="copyright">
                 &copy; Copyright <strong><span>iPortfolio</span></strong>
             </div>
@@ -405,21 +416,20 @@ while($data5=mysqli_fetch_array($runquery5)){
     <script src="assets/js/main.js"></script>
 
     <script>
-        if (window.self == window.top) {
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-55234356-4', 'auto');
-            ga('send', 'pageview');
-        }
-
+    if (window.self == window.top) {
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-55234356-4', 'auto');
+        ga('send', 'pageview');
+    }
     </script>
 </body>
 
