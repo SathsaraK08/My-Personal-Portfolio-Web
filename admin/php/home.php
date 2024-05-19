@@ -39,7 +39,7 @@
         <div class="form-group col-md-6">
             <label for="name">Name</label>
             <input type="name" name="name" value="<?=$data['name']?>" class="form-control" id="name"
-                placeholder="Mohan Goswami">
+                placeholder="Sathsara Karunarathne">
         </div>
 
 
@@ -52,36 +52,36 @@
         <div class="form-group col-md-6">
             <label for="twitter">Twitter</label>
             <input type="text" class="form-control" value="<?=$data['twitter']?>" name="twitter" id="twitter"
-                placeholder="https://twitter.com/MohanGo94273231">
+                placeholder="https://twitter.com/">
         </div>
 
         <div class="form-group col-md-6">
             <label for="facebook">Facebook</label>
             <input type="text" class="form-control" value="<?=$data['facebook']?>" name="facebook" id="facebook"
-                placeholder="https://facebook.com/MohanGo94273231">
+                placeholder="https://facebook.com/">
         </div>
 
         <div class="form-group col-md-6">
             <label for="instagram">Instagram</label>
             <input type="text" class="form-control" value="<?=$data['instagram']?>" name="instagram" id="instagram"
-                placeholder="https://instagram.com/MohanGo94273231">
+                placeholder="https://instagram.com/">
         </div>
 
         <div class="form-group col-md-6">
             <label for="skype">Skype</label>
             <input type="text" value="<?=$data['skype']?>" class="form-control" name="skype" id="skype"
-                placeholder="@monu250">
+                placeholder="@Skype">
         </div>
 
         <div class="form-group col-md-6">
             <label for="linkedin">Linkedin</label>
             <input type="text" class="form-control" value="<?=$data['linkedin']?>" name="linkedin" id="linkedin"
-                placeholder="https://linkedin.com/MohanGo94273231">
+                placeholder="https://linkedin.com/">
         </div>
         <div class="form-group col-md-6">
             <label for="github">Github</label>
             <input type="text" class="form-control" value="<?=$data['github']?>" name="github" id="github"
-                placeholder="https://github.com/MohanGo94273231">
+                placeholder="https://github.com/">
         </div>
     </div>
     <div class="form-group">
