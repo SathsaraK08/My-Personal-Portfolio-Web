@@ -47,7 +47,8 @@ $data = mysqli_fetch_array($runquery);
   ======================================================== -->
     <style>
     #hero {
-        background: url(assets/img/<?=$data['homewallpaper']?>);
+        background: url('assets/img/<?=$data['homewallpaper']?>') no-repeat center center !important;
+        background-size: cover !important;
     }
     </style>
 </head>
@@ -106,6 +107,7 @@ $data = mysqli_fetch_array($runquery);
                     <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
                     <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
                     <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                    <li><a href="#certificates"><i class="bx bx-book-content"></i> Certificates</a></li>
                     <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
 
                 </ul>
@@ -258,9 +260,85 @@ while($data4=mysqli_fetch_array($runquery4)){
                 </div>
 
             </div>
-        </section><!-- End Resume Section -->
+        </section>
+        <!------------------------------ End Resume Section ------------------------------------->
 
-        <!-- ======= Portfolio Section ======= -->
+
+
+
+
+
+
+        <!-- ======= Certificates Section ======= -->
+
+
+        <section id="certificates" class="portfolio section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                </div>
+
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+                    <?php
+
+                    $query5 = "SELECT * FROM portfolio";
+                               $runquery5= mysqli_query($db,$query5);
+                               while($data5=mysqli_fetch_array($runquery5)){
+                    ?>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/<?=$data5['projectpic']?>" class="img-fluid" alt="">
+                            <div class="portfolio-links" title="<?=$data5['projectname']?>">
+
+                                <a href="assets/img/<?=$data5['projectpic']?>" data-gall="portfolioGallery"
+                                    class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="<?=$data5['projectlink']?>" target="_blank"
+                                    title="Visit <?=$data5['projectname']?>"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+}
+                    ?>
+
+
+
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- End Certificates Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ====================================== Portfolio Section ===================================== -->
+
         <section id="portfolio" class="portfolio section-bg">
             <div class="container">
 

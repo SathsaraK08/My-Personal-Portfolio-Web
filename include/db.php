@@ -1,21 +1,23 @@
 <?php
-// $db = mysqli_connect(
-//     "localhost",
-//     "root",
-//     "",
-//     "iportfolio"
-// );
+
+// ------------------------------------------ Local Environment------------------------------------------
+$db = mysqli_connect(
+    "localhost",
+    "root",
+    "",
+    "iportfolio"
+);
 
 
 // Production Environment - AWS RDS Remote MySQL Database Connection Configuration
 
 
-$db = mysqli_connect(
-    "mysql.cdm08uoa8kk2.us-east-1.rds.amazonaws.com",
-    "admin",
-    "Romi.5351",
-    "iportfolio"
-);
+// $db = mysqli_connect(
+//     "mysql.cdm08uoa8kk2.us-east-1.rds.amazonaws.com",
+//     "admin",
+//     "Romi.5351",
+//     "iportfolio"
+// );
 
 
 // Production Environment - AWS RDS Remote MySQL Database Connection Configuration
