@@ -1,34 +1,16 @@
 <?php
+// Updated database connection details
+$host = "129.80.115.119"; // Your server's IP address
+$username = "travor"; // Your database username
+$password = "#SK.Tech@4325"; // Your database password
+$dbname = "iportfolio"; // Your database name
 
-// ------------------------------------------ Local Environment------------------------------------------
-$db = mysqli_connect(
-    "localhost",
-    "root",
-    "",
-    "iportfolio"
-);
+// Create the database connection
+$db = mysqli_connect($host, $username, $password, $dbname);
 
-
-// Production Environment - AWS RDS Remote MySQL Database Connection Configuration
-
-
-// $db = mysqli_connect(
-//     "mysql.cdm08uoa8kk2.us-east-1.rds.amazonaws.com",
-//     "admin",
-//     "Romi.5351",
-//     "iportfolio"
-// );
-
-
-// Production Environment - AWS RDS Remote MySQL Database Connection Configuration
-
-// $host = 'mysql.cdm08uoa8kk2.us-east-1.rds.amazonaws.com';
-// $db = 'iportfolio';
-// $user = 'admin';
-// $pass = 'Romi.5351';
-// $charset = 'utf8mb4';
-//if($db){
-//    echo "databse is connected !";
-//}else{
-//    echo "something is wrong with database !";
-//}
+// Check the connection
+if (!$db) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully"; // This line will display if the connection is successful
+?>
