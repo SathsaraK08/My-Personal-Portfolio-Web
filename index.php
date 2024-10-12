@@ -469,7 +469,7 @@ while($data5=mysqli_fetch_array($runquery5)){
             </div>
 -->
             <div class="credits">
-                Developed by <a href="#">Sathsara Karunarathne</a>
+                Developed by <a href="#"> Sathsara Karunarathne | AI/ML Engineer </a>
             </div>
         </div>
     </footer><!-- End  Footer -->
