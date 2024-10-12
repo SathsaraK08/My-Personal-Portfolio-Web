@@ -1,0 +1,28 @@
+name: CI/CD Pipeline for Portfolio
+
+on:
+  push:
+    branches:
+      - DEV
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.UBUNTU_WEB_SERVER_CI_CD_SSH_ACCESS_KEY }}" > ~/.ssh/id_rsa_github_deploy
+          chmod 600 ~/.ssh/id_rsa_github_deploy
+          ssh-keyscan -H 129.80.115.119 >> ~/.ssh/known_hosts
+
+      - name: Deploy to Server
+        run: |
+          ssh -i ~/.ssh/id_rsa_github_deploy ubuntu@129.80.115.119 << 'EOF'
+          cd /var/www/my_portfolio_Web
+          git pull origin DEV
+          exit
+          EOF
